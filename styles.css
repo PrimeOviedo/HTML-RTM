@@ -52,7 +52,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: url('assets/fallback.jpg') center/cover no-repeat;
+    background: url('assets/hero_fondo.jpg') center/cover no-repeat;
     opacity: 0.15;
 }
 
