@@ -15,7 +15,7 @@ body {
 
 /* ✨ Secciones generales */
 .section {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -52,7 +52,6 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: url('assets/hero_fondo.jpg') center/cover no-repeat;
     opacity: 0.15;
 }
 
@@ -298,26 +297,51 @@ iframe {
   opacity: 1;
 }
 
+.sidebar-item i {
+    font-size: 1.6rem;
+    color: white;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.sidebar-item:hover i {
+    color: #ffc430; /* Rojo Apple */
+    transform: scale(1.1);
+}
+
+/* ✨ Contenedor para tarjetas flotantes tipo Glass en Hero */
+.hero-cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;         /* mantiene responsividad */
+    height: auto;
+    min-width: 92%;
+    position: absolute;
+    left: 107px;
+    padding-right: 1.5rem;
+    top: 50%;
+    /* left: 50%; */ /* Eliminado para quitar centrado horizontal */
+    transform: translateY(-50%);
+    /* justify-content: center; ya está presente para centrar el contenido horizontalmente */
+}
+
 /* ✨ Tarjeta flotante tipo Glass en Hero */
 .profile-card-glass {
-  position: absolute;
-  top: 50%;
-  left: 107px;
-  transform: translateY(-50%);
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
   border-radius: 25px;
-  min-height: 85vh; /* asegura que no se encoja demasiado */
-  max-height: 85vh; /* si quieres limitar cuánto crece */
+  height: 70vh;
   width: clamp(300px, 40%, 600px);
+  max-width: 350px;
   padding: 2rem;
-  max-width: 400px;
   text-align: center;
   color: white;
   z-index: 5;
+  flex: 0 0 350px;
 }
 
 .profile-card-glass .emoji {
@@ -378,4 +402,147 @@ iframe {
 
 .profile-card-glass .contact-button:hover {
   background: #ffd633;
+}
+
+/* ✨ 2 Tarjeta flotante tipo Glass en Hero */
+.hero-card-glass {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    height: 70vh;
+    min-width: 40%;
+    width: 40%;
+    padding: 2rem;
+    text-align: center;
+    color: white;
+    z-index: 5;
+    flex: 1 1 auto;
+}
+
+.hero-card-glass .emoji {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.hero-card-glass .titles span {
+    display: block;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.hero-card-glass .profile-photo {
+    width: 100%;
+    height: 30vh;
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    padding: 0.5rem;
+}
+
+.hero-card-glass .profile-info p {
+    font-size: 0.9rem;
+    margin: 4px 0;
+}
+
+.hero-card-glass .profile-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.hero-card-glass .profile-social a {
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.hero-card-glass .profile-social a:hover {
+    color: #c00;
+}
+
+.hero-card-glass .contact-button {
+    display: inline-block;
+    background: #ffcc00;
+    color: #000;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.hero-card-glass .contact-button:hover {
+    background: #ffd633;
+}
+
+
+@media (max-width: 1000px) {
+    .sidebar {
+        display: flex;
+        flex-direction: row !important;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        bottom: 20px;
+        left: 50%;
+        position: fixed;
+        transform: translateX(-50%);
+        border-radius: 30px;
+        padding: 10px 30px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        z-index: 1000;
+        top: auto !important;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-direction: row !important;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        width: auto;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .sidebar-item {
+        width: 45px;
+        height: 45px;
+    }
+
+    .sidebar-item::after {
+        left: 50%;
+        top: -40px;
+        transform: translateX(-50%);
+    }
+
+    .profile-card-glass {
+        width: 90%;
+        max-width: 90%;
+    }
+
+    .hero-card-glass {
+        display: none;
+    }
+
+    .hero-cards-container {
+        flex-direction: column;
+        top: auto;
+        align-items: center;
+        left: 50%;
+        transform: translateX(-50%);
+        gap: 1rem;
+        padding-right: 0;
+    }
 }
