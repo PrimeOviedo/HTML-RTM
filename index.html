@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio de Dashboards</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="sidebar">
+    <ul>
+      <li>
+        <a href="#hero" class="sidebar-item" title="Inicio">
+          🏠
+        </a>
+      </li>
+      <li>
+        <a href="#dashboards" class="sidebar-item" title="Dashboards">
+          📊
+        </a>
+      </li>
+      <li>
+        <a href="#contact" class="sidebar-item" title="Contacto">
+          ✉️
+        </a>
+      </li>
+    </ul>
+  </nav>
+<!-- 🖤 SECCIÓN 1: Bienvenida -->
+  <section class="section hero" id="hero">
+      <video autoplay muted loop playsinline class="hero-video">
+          <source src="assets/hero_2.mp4" type="video/mp4">
+      </video>
+
+      <div class="hero-content">
+          <h1>Bienvenido a mi Dashboard</h1>
+          <p>Explora análisis y visualizaciones interactivas</p>
+          <a href="#dashboards" class="scroll-down">Ver Dashboards</a>
+      </div>
+  </section>
+
+<!-- 📊 SECCIÓN 2: Dashboards -->
+<section class="section dashboards" id="dashboards">
+    <h2>Dashboards Interactivos</h2>
+    <br>
+    <nav class="tab-nav">
+        <button class="tab-button active" data-tab="MRK">MRK</button>
+        <button class="tab-button" data-tab="RTM">RTM</button>
+        <button class="tab-button" data-tab="Ventas">Ventas</button>
+    </nav>
+    <br>
+    <div class="iframe-container">
+        <iframe id="dashboard-frame" src="" frameborder="0"></iframe>
+    </div>
+</section>
+
+<!-- 📬 SECCIÓN 3: Contacto (opcional) -->
+<section class="section contact" id="contact">
+    <h2>Contacto</h2>
+    <p>Puedes encontrarme en <a href="mailto:correo@ejemplo.com">correo@ejemplo.com</a></p>
+</section>
+
+<script src="main.js"></script>
+</body>
+</html>
