@@ -334,7 +334,7 @@ iframe {
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
   border-radius: 25px;
-  height: 70vh;
+  height: 80vh;
   width: clamp(300px, 40%, 600px);
   max-width: 350px;
   padding: 2rem;
@@ -412,7 +412,7 @@ iframe {
     border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
     border-radius: 25px;
-    height: 70vh;
+    height: 80vh;
     min-width: 40%;
     width: 40%;
     padding: 2rem;
@@ -494,7 +494,7 @@ iframe {
         left: 50%;
         position: fixed;
         transform: translateX(-50%);
-        border-radius: 30px;
+        border-radius: 50px;
         padding: 10px 30px;
         background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(20px);
