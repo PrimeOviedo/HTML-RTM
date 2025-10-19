@@ -56,10 +56,6 @@ body {
     opacity: 0.15;
 }
 
-/*@keyframes float-bg {
-  from { transform: translate(0, 0); }
-  to { transform: translate(-50px, -50px); }
-}*/
 
 .hero h1 {
   font-size: 4rem;
