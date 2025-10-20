@@ -326,6 +326,39 @@ iframe {
     /* justify-content: center; ya está presente para centrar el contenido horizontalmente */
 }
 
+.profile-logo-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+}
+
+.logo-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+.titles-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    flex: 1;
+}
+
+.emoji {
+    font-size: 2.5rem;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    color: red; /* Cambia el color del logo */
+}
+
 /* ✨ Tarjeta flotante tipo Glass en Hero */
 .profile-card-glass {
   background: rgba(255, 255, 255, 0.08);
@@ -364,6 +397,16 @@ iframe {
   object-position: top;
   display: block;
   padding: 0.5rem;
+}
+
+.profile-card-glass .mail-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    padding: 0.5rem;
 }
 
 .profile-card-glass .profile-info p {
